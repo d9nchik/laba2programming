@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 
 public class test {
     public static void main(String[] args) throws FileNotFoundException {
-        dataInput[] data = createData(dataInput.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision1.csv"));
+        dataInput[] data = createData(dataInput.create_matrix_information("/Users/nikitasakun/Desktop/Java project/laba2programming/tests/eurovision2.csv"));
         for (dataInput datum : data) {
             datum.Show_Info();
         }
