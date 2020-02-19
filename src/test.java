@@ -1,12 +1,19 @@
+import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 
 public class test {
+    static File out_file;
+    static PrintWriter pw;
     public static void main(String[] args) throws FileNotFoundException {
+        out_file = new File("OUT_FILE");
+        pw = new PrintWriter(out_file);
         dataInput[] data = createData(dataInput.create_matrix_information("/Users/nikitasakun/Desktop/Java project/laba2programming/tests/eurovision2.csv"));
         for (dataInput datum : data) {
             datum.Show_Info();
         }
         dataInput.Sort_Arr(data);
+        pw.close();
     }
 
     public static dataInput[] createData(String[] participator) {
@@ -28,14 +35,17 @@ public class test {
         return returning;
     }
 
-    public static dataInput[] setPlace(dataInput[] data) {
-        for (int k = 0; k < data.length; k++) {
-            if (k == 0) {
+    public static dataInput[] setPlace(dataInput[] data){
+        for (int k=0; k<data.length; k++){
+            if (k==0){
                 data[k].SetScore(12);
-            } else if (k == 1) {
+            }
+            else if (k==1){
                 data[k].SetScore(10);
-            } else if (k <= 9)
+            }
+            else if(k<=9) {
                 data[k].SetScore(10 - k);
+            }
 
         }
         return data;
