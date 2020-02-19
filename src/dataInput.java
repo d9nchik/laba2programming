@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class dataInput {
+public class dataInput{
     private int score;
     private String name;
 
@@ -22,7 +22,7 @@ public class dataInput {
 
     //================================================================================================
     //==============МЕТОД ВЫВОДА======================================
-    public void Show_Info() {
+    public void Show_Info(){
         System.out.println("Страна " + this.name + " - " + this.score);
     }
 
