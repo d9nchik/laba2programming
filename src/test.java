@@ -8,7 +8,7 @@ public class test {
     public static void main(String[] args) throws FileNotFoundException {
         out_file = new File("OUT_FILE");
         pw = new PrintWriter(out_file);
-        dataInput[] data = createData(dataInput.create_matrix_information("/Users/nikitasakun/Desktop/Java project/laba2programming/tests/eurovision1.csv"));
+        dataInput[] data = createData(dataInput.create_matrix_information("/Users/nikitasakun/Desktop/Java project/laba2programming/tests/eurovision2.csv"));
         for (dataInput datum : data) {
             datum.Show_Info();
         }
@@ -50,7 +50,7 @@ public class test {
     public static void showPlace(dataInput[] data) {
         for (int k = 0; k < data.length; k++) {
             System.out.println((k + 1) + " місце " + data[k].getName() + " з кількістю балів: " + data[k].getScore());
-            pw.println((k + 1) + " місце " + data[k].getName() + " з кількістю балів: " + data[k].getScore());
+            pw.println((k + 1) + " місце " + data[k].getName() + " з кількістю балів:  " + data[k].getScore());
         }
         pw.close();
     }
