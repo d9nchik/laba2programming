@@ -47,6 +47,10 @@ public class dataInput {
     public int getScore(){
         return this.score;
     }
+
+    public String getName(){
+        return this.name;
+    }
     //=================ФУНКЦИЯ СОРТИРОВКИ БАЛЛОВ=====================================
     public static dataInput[] Sort_Arr(dataInput[]matrix_info){
         for(int i = 0;i<matrix_info.length;i++){

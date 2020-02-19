@@ -2,11 +2,11 @@ import java.io.FileNotFoundException;
 
 public class test {
     public static void main(String[] args) throws FileNotFoundException {
-        dataInput[] data = createData(dataInput.create_matrix_information("/Users/nikitasakun/Desktop/Java project/laba2programming/tests/eurovision2.csv"));
+        dataInput[] data = createData(dataInput.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision1.csv"));
         for (dataInput datum : data) {
             datum.Show_Info();
         }
-        dataInput.Sort_Arr(data);
+        showPlace(setPlace(dataInput.Sort_Arr(data)));
     }
 
     public static dataInput[] createData(String[] participator) {
@@ -39,5 +39,11 @@ public class test {
 
         }
         return data;
+    }
+
+    public static void showPlace(dataInput[] data) {
+        for (int k = 0; k < data.length; k++) {
+            System.out.println((k + 1) + " місце " + data[k].getName() + " з кількістю балів: " + data[k].getScore());
+        }
     }
 }
