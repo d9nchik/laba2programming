@@ -5,8 +5,9 @@ import java.util.Scanner;
 public class dataInput {
     private int score;
     private String name;
+
     //===============ЧТЕНИЕ ФАЙЛА И ЗАНОС СТРОК В МАССИВ СТРОК========================================
-    public static String[] create_matrix_information (String file_name) throws FileNotFoundException {
+    public static String[] create_matrix_information(String file_name) throws FileNotFoundException {
         File information = new File(file_name);
         Scanner scanner = new Scanner(information);
         String size_info = scanner.nextLine();
@@ -18,11 +19,13 @@ public class dataInput {
         scanner.close();
         return matrix_info;
     }
+
     //================================================================================================
     //==============МЕТОД ВЫВОДА======================================
-    public void Show_Info(){
-        System.out.println("Страна "+ this.name + " - " + this.score);
+    public void Show_Info() {
+        System.out.println("Страна " + this.name + " - " + this.score);
     }
+
     //================================================================
     public void SetScore(int score) {
         this.score = score;
@@ -31,7 +34,13 @@ public class dataInput {
     }
 
     public void SetName(String name) {
+
         this.name = name;
+    }
+
+    dataInput() {
+        this.score = 1;
+        this.name = "";
     }
 
 
