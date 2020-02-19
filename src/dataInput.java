@@ -19,7 +19,11 @@ public class dataInput {
         return matrix_info;
     }
     //================================================================================================
-
+    //==============МЕТОД ВЫВОДА======================================
+    public void Show_Info(){
+        System.out.println("Страна "+ this.name + " - " + this.score);
+    }
+    //================================================================
     public void SetScore(int score) {
         this.score = score;
 
