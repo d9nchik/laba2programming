@@ -6,6 +6,7 @@ public class test {
         for (dataInput datum : data) {
             datum.Show_Info();
         }
+        dataInput.Sort_Arr(data);
     }
 
     public static dataInput[] createData(String[] participator) {
