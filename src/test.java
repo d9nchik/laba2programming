@@ -28,16 +28,14 @@ public class test {
         return returning;
     }
 
-    public static dataInput[] setPlalce(dataInput[] data){
-        for (int k=0; k<data.length; k++){
-            if (k==0){
+    public static dataInput[] setPlace(dataInput[] data) {
+        for (int k = 0; k < data.length; k++) {
+            if (k == 0) {
                 data[k].SetScore(12);
-            }
-            else if (k==1){
+            } else if (k == 1) {
                 data[k].SetScore(10);
-            }
-            else
-                data[k].SetScore(10-k);
+            } else if (k <= 9)
+                data[k].SetScore(10 - k);
 
         }
         return data;
