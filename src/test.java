@@ -5,10 +5,11 @@ import java.io.PrintWriter;
 public class test {
     static File out_file;
     static PrintWriter pw;
+
     public static void main(String[] args) throws FileNotFoundException {
         out_file = new File("OUT_FILE");
         pw = new PrintWriter(out_file);
-        dataInput[] data = createData(dataInput.create_matrix_information("/Users/nikitasakun/Desktop/Java project/laba2programming/tests/eurovision2.csv"));
+        dataInput[] data = createData(dataInput.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision2.csv"));
         System.out.println("=====================================");
         System.out.println("Вот все элементы которые были в начальном файле:");
         for (dataInput datum : data) {
@@ -53,8 +54,8 @@ public class test {
 
     public static void showPlace(dataInput[] data) {
         for (int k = 0; k < data.length; k++) {
-            System.out.println((k + 1) + " місце " + data[k].getName() + " з кількістю балів: " + data[k].getScore());
-            pw.println((k + 1) + " місце " + data[k].getName() + " з кількістю балів:  " + data[k].getScore());
+            System.out.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getName(), data[k].getScore());
+            pw.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getName(), data[k].getScore());
         }
         pw.close();
     }
