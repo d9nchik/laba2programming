@@ -43,5 +43,9 @@ public class dataInput {
         this.name = "";
     }
 
+    public int getScore(){
+        return this.score;
+    }
+
 
 }
