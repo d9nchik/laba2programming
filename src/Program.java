@@ -2,7 +2,7 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 
-public class test {
+public class Program {
     static File out_file;
     static PrintWriter pw;
 
