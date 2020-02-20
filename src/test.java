@@ -9,7 +9,7 @@ public class test {
     public static void main(String[] args) throws FileNotFoundException {
         out_file = new File("OUT_FILE");
         pw = new PrintWriter(out_file);
-        dataInput[] data = createData(dataInput.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision2.csv"));
+        dataInput[] data = createData(ReaderWriter.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision2.csv"));
         System.out.println("=====================================");
         System.out.println("Вот все элементы которые были в начальном файле:");
         for (dataInput datum : data) {
