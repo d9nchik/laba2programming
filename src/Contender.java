@@ -30,5 +30,4 @@ public class Contender {
     public String getCountryName(){
         return this.countryName;
     }
-    //=================ФУНКЦИЯ СОРТИРОВКИ БАЛЛОВ=====================================
 }

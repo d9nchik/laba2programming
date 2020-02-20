@@ -1,24 +1,5 @@
 public class VotesProcessor {
-    public static Contender[] createData(String[] participator) {
-        Contender[] returning = new Contender[participator.length];
-        for (int j = 0; j < participator.length; j++) {
-            returning[j] = new Contender();
-        }
-        for (int k = 0; k < participator.length; k++) {
-            String[] temp = participator[k].split(",");
-            returning[k].SetName(temp[0]);
-            int sum = 0;
-            for (int j = 1; j < temp.length; j++) {
-                sum += Integer.parseInt(temp[j]);
-            }
 
-            returning[k].SetScore(sum);
-
-        }
-        return returning;
-    }
-
-    //=================ФУНКЦИЯ СОРТИРОВКИ БАЛЛОВ=====================================
     public static Contender[] processVotes(Contender[] Contenter) {
         for (int i = 0; i < Contenter.length; i++) {
             int max_index = i;
@@ -49,6 +30,18 @@ public class VotesProcessor {
 
 
     }
-    //================================================================================
+    public static Contender parse(String str){
+        Contender country = new Contender();
+        String[] temp = str.split(",");
+        country.SetName(temp[0]);
+        int sum = 0;
+        for (int j = 1; j < temp.length; j++) {
+            sum += Integer.parseInt(temp[j]);
+        }
+
+        country.SetScore(sum);
+        return country;
+    }
+
 
 }
