@@ -19,12 +19,12 @@ public class ReaderWriter {
         return matrix_info;
     }
 
-    public static void showPlace(dataInput[] data) throws FileNotFoundException {
+    public static void showPlace(Contender[] data) throws FileNotFoundException {
         out_file = new File("OUT_FILE");
         pw = new PrintWriter(out_file);
         for (int k = 0; k < data.length; k++) {
-            System.out.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getName(), data[k].getScore());
-            pw.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getName(), data[k].getScore());
+            System.out.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getCountryName(), data[k].getVotes());
+            pw.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getCountryName(), data[k].getVotes());
         }
         pw.close();
     }

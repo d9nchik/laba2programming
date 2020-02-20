@@ -6,10 +6,10 @@ public class Program {
 
     public static void main(String[] args) throws FileNotFoundException {
 
-        dataInput[] data = VotesProcessor.createData(ReaderWriter.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision2.csv"));
+        Contender[] data = VotesProcessor.createData(ReaderWriter.create_matrix_information("C:\\Users\\danga\\IdeaProjects\\laba2programming\\tests\\eurovision2.csv"));
         System.out.println("=====================================");
         System.out.println("Вот все элементы которые были в начальном файле:");
-        for (dataInput datum : data) {
+        for (Contender datum : data) {
             datum.Show_Info();
         }
         System.out.println("=====================================");

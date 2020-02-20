@@ -1,8 +1,8 @@
 public class VotesProcessor {
-    public static dataInput[] createData(String[] participator) {
-        dataInput[] returning = new dataInput[participator.length];
+    public static Contender[] createData(String[] participator) {
+        Contender[] returning = new Contender[participator.length];
         for (int j = 0; j < participator.length; j++) {
-            returning[j] = new dataInput();
+            returning[j] = new Contender();
         }
         for (int k = 0; k < participator.length; k++) {
             String[] temp = participator[k].split(",");
@@ -19,16 +19,16 @@ public class VotesProcessor {
     }
 
     //=================ФУНКЦИЯ СОРТИРОВКИ БАЛЛОВ=====================================
-    public static dataInput[] processVotes(dataInput[] Contenter) {
+    public static Contender[] processVotes(Contender[] Contenter) {
         for (int i = 0; i < Contenter.length; i++) {
             int max_index = i;
             for (int j = i + 1; j < Contenter.length; j++) {
-                if (Contenter[j].getScore() > Contenter[max_index].getScore()) {
+                if (Contenter[j].getVotes() > Contenter[max_index].getVotes()) {
                     max_index = j;
                 }
             }
             if (i != max_index) {
-                dataInput tmp = Contenter[i];
+                Contender tmp = Contenter[i];
                 Contenter[i] = Contenter[max_index];
                 Contenter[max_index] = tmp;
 
