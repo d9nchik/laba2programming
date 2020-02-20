@@ -1,4 +1,4 @@
-public class VotesProcesser {
+public class VotesProcessor {
     public static dataInput[] createData(String[] participator) {
         dataInput[] returning = new dataInput[participator.length];
         for (int j = 0; j < participator.length; j++) {
@@ -19,7 +19,7 @@ public class VotesProcesser {
     }
 
     //=================ФУНКЦИЯ СОРТИРОВКИ БАЛЛОВ=====================================
-    public static dataInput[] proccesVotes(dataInput[] Contenter) {
+    public static dataInput[] processVotes(dataInput[] Contenter) {
         for (int i = 0; i < Contenter.length; i++) {
             int max_index = i;
             for (int j = i + 1; j < Contenter.length; j++) {
