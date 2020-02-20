@@ -19,38 +19,36 @@ public class VotesProcesser {
     }
 
     //=================ФУНКЦИЯ СОРТИРОВКИ БАЛЛОВ=====================================
-    public static dataInput[] Sort_Arr(dataInput[] matrix_info) {
-        for (int i = 0; i < matrix_info.length; i++) {
+    public static dataInput[] proccesVotes(dataInput[] Contenter) {
+        for (int i = 0; i < Contenter.length; i++) {
             int max_index = i;
-            for (int j = i + 1; j < matrix_info.length; j++) {
-                if (matrix_info[j].getScore() > matrix_info[max_index].getScore()) {
+            for (int j = i + 1; j < Contenter.length; j++) {
+                if (Contenter[j].getScore() > Contenter[max_index].getScore()) {
                     max_index = j;
                 }
             }
             if (i != max_index) {
-                dataInput tmp = matrix_info[i];
-                matrix_info[i] = matrix_info[max_index];
-                matrix_info[max_index] = tmp;
+                dataInput tmp = Contenter[i];
+                Contenter[i] = Contenter[max_index];
+                Contenter[max_index] = tmp;
 
             }
 
+
         }
-        return matrix_info;
+        for (int k = 0; k < Contenter.length; k++) {
+            if (k == 0) {
+                Contenter[k].SetScore(12);
+            } else if (k == 1) {
+                Contenter[k].SetScore(10);
+            } else if (k <= 9)
+                Contenter[k].SetScore(10 - k);
+
+        }
+        return Contenter;
 
 
     }
     //================================================================================
 
-    public static dataInput[] setPlace(dataInput[] data) {
-        for (int k = 0; k < data.length; k++) {
-            if (k == 0) {
-                data[k].SetScore(12);
-            } else if (k == 1) {
-                data[k].SetScore(10);
-            } else if (k <= 9)
-                data[k].SetScore(10 - k);
-
-        }
-        return data;
-    }
 }

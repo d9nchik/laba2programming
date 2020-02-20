@@ -13,7 +13,7 @@ public class Program {
         }
         System.out.println("=====================================");
         System.out.println("Вот отсортированый рейтинг по баллам:");
-        ReaderWriter.showPlace(VotesProcesser.setPlace(VotesProcesser.Sort_Arr(data)));
+        ReaderWriter.showPlace(VotesProcesser.proccesVotes(data));
     }
 
 
