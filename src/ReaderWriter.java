@@ -23,8 +23,8 @@ public class ReaderWriter {
         out_file = new File("OUT_FILE");
         pw = new PrintWriter(out_file);
         for (int k = 0; k < data.length; k++) {
-            System.out.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getCountryName(), data[k].getVotes());
-            pw.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getCountryName(), data[k].getVotes());
+            System.out.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getCountryName(), data[k].getScores());
+            pw.printf("%-2d місце %s з кількістю балів: %2d\n", (k + 1), data[k].getCountryName(), data[k].getScores());
         }
         pw.close();
     }

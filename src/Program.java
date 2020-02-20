@@ -14,7 +14,7 @@ public class Program {
         System.out.println("=====================================");
         System.out.println("Вот все элементы которые были в начальном файле:");
         for (Contender datum : data) {
-            datum.Show_Info();
+            System.out.println(datum.Show_Info());
         }
         System.out.println("=====================================");
         System.out.println("Вот отсортированый рейтинг по баллам:");

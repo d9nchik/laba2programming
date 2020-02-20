@@ -1,14 +1,16 @@
 public class Contender {
     private int votes;
     private String countryName;
-    public void Show_Info(){
-        System.out.println("Страна " + this.countryName + " - " + this.votes);
+    private int scores;
+
+    public String Show_Info() {
+        return "Страна " + this.countryName + " - " + this.votes;
     }
 
     //================================================================
 
     public void SetScore(int score) {
-        this.votes = score;
+        this.scores = score;
 
 
     }
@@ -18,16 +20,20 @@ public class Contender {
         this.countryName = name;
     }
 
-    Contender() {
-        this.votes = 1;
-        this.countryName = "";
+    Contender(int votes, String countryName) {
+        this.votes = votes;
+        this.countryName = countryName;
     }
 
-    public int getVotes(){
+    public int getVotes() {
         return this.votes;
     }
 
-    public String getCountryName(){
+    public String getCountryName() {
         return this.countryName;
+    }
+
+    public int getScores() {
+        return this.scores;
     }
 }

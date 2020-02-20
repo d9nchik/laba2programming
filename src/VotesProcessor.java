@@ -30,17 +30,16 @@ public class VotesProcessor {
 
 
     }
-    public static Contender parse(String str){
-        Contender country = new Contender();
+
+    public static Contender parse(String str) {
+
         String[] temp = str.split(",");
-        country.SetName(temp[0]);
         int sum = 0;
         for (int j = 1; j < temp.length; j++) {
             sum += Integer.parseInt(temp[j]);
         }
 
-        country.SetScore(sum);
-        return country;
+        return new Contender(sum, temp[0]);
     }
 
 
